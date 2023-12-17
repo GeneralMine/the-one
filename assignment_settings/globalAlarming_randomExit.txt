@@ -1,6 +1,7 @@
 Scenario.simulateConnections = false
-Group1.emergencyType = randomExit
+Scenario.type = Global Alarming - Random Exit
 
 Scenario.nrofHostGroups = 1
+Group1.emergencyType = randomExit
 
 Events.nrof = 0

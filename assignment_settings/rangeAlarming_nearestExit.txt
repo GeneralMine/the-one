@@ -1,2 +1,4 @@
 Scenario.simulateConnections = true
+Scenario.type= Range Alarming - Nearest Exit
+
 Group1.emergencyType = nearestExit
