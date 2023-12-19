@@ -119,7 +119,7 @@ public class StudentMovement extends MovementModel {
     }
 
     private Path getPathToRandomExit() {
-        Exit randomExit = EXITS.get(rng.nextInt(0, EXITS.size()));
+        Exit randomExit = EXITS.get(rng.nextInt(EXITS.size()));
         Path path = calculateShortestPath(host.getLocation(), randomExit.getCoord());
         path.setSpeed(10);
         return path;

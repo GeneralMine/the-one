@@ -1,2 +1,5 @@
-Scenario.simulateConnections = true
+# In-Range Alarm notification + student hosts choose a random exit in their panic
+simulateConnections = true
+Scenario.type = Range Alarming - Random Exit
+
 Group1.emergencyType = randomExit

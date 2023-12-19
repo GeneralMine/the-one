@@ -1,6 +1,7 @@
+# Instant global alarm notification + student hosts choose the nearest exit
 Scenario.simulateConnections = false
-Group1.emergencyType = nearestExit
+Scenario.type = Global Alarming - Nearest Exit
 
 Scenario.nrofHostGroups = 1
-
+Group1.emergencyType = nearestExit
 Events.nrof = 0

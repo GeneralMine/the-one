@@ -116,7 +116,16 @@ public abstract class DTNSimUI {
 						reportClass));
 			}
 
-			this.emergencyStartTime = scen.getEmergencyStartTimeRange().map(Range::getRandomDoubleInRange);
+			if (scen.getEmergencyStartTimeRange().isPresent()) {
+				if (scen.getEmergencyStartTimeRange().get().getMax() == scen.getEmergencyStartTimeRange().get().getMin()) {
+					// specific emergency time given
+					Double d = scen.getEmergencyStartTimeRange().get().getMax();
+					this.emergencyStartTime = Optional.of(d);
+				} else {
+					// random emergency time range given
+					this.emergencyStartTime = scen.getEmergencyStartTimeRange().map(Range::getRandomDoubleInRange);
+				}
+			}
 
 			this.world = this.scen.getWorld();
 			world.warmupMovementModel(warmupTime);
@@ -182,8 +191,12 @@ public abstract class DTNSimUI {
 					((EmergencyReport) report).emergencyTriggered();
 				}
 			}
-			// TODO: check if emergency mode should be instantly triggered for all hosts
-			world.setEmergencyModeForAllHostsInWorld();
+
+			Settings s = new Settings("Events");
+			if (s.getInt("nrof") == 0) {
+				// instant global warning
+				world.setEmergencyModeForAllHostsInWorld();
+			} // else: in-range warning
 		}
 	}
 
