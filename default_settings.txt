@@ -1,6 +1,5 @@
 Scenario.name = Escape_the_MI-%%Scenario.type%%-%%MovementModel.rngSeed%%-%%Exit1.exitRate%%-%%Scenario.emergencyRangeTime%%
-# Possible types: NearestExit, Random...?
-Scenario.type = NearestExit
+
 Scenario.endTime = 5000
 Scenario.updateInterval = 1
 Scenario.simulateConnections = true
@@ -68,7 +67,7 @@ Events1.emergencyTime = 500
 
 # REPORTS
 Report.nrofReports = 2
-Report.reportDir = reports_test
+Report.reportDir = reports
 Report.report1 = EmergencyReport
 Report.report2 = NumberOfHostsReport
 
