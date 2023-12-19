@@ -1,3 +1,4 @@
+# Instant global alarm notification + student hosts choose a random exit in their panic
 Scenario.simulateConnections = false
 Scenario.type = Global Alarming - Random Exit
 

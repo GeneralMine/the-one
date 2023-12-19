@@ -1,3 +1,4 @@
+# Instant global alarm notification + student hosts choose the nearest exit
 Scenario.simulateConnections = false
 Scenario.type = Global Alarming - Nearest Exit
 

@@ -69,7 +69,7 @@ public class StudentMovement extends MovementModel {
                 dtnHost.setInLecture(true);
                 String roomName = new ArrayList<>(ROOMS.keySet()).get(rng.nextInt(ROOMS.size()));
                 Path path = calculateShortestPath(dtnHost.getLocation(), ROOMS.get(roomName));
-                System.out.println(dtnHost + " is going to " + roomName + " at " + currentTime);
+                //System.out.println(dtnHost + " is going to " + roomName + " at " + currentTime);
                 path.setSpeed(5);
                 return path;
             }
